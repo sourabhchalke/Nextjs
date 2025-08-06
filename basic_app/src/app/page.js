@@ -1,4 +1,6 @@
+"use client";
 
+import { useState } from "react";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -16,12 +18,20 @@ export default function Home() {
   );
 }
 
+
+
 export const NewComp=(props)=>{
+
+  const [value,setValue]=useState(1);
 
   return(
     <>
       <h2>NewComp</h2>
       <h3>My Name is {props.name}</h3>
+
+      <button onClick={()=>setValue(value+1)}>Click</button>
+      <h3>{value}</h3>
+
     </>
   )
 
