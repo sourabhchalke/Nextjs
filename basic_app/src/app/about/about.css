@@ -1,0 +1,11 @@
+.ul-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.ul-menu li a{
+    color: blue;
+}
+.about-text{
+    color: red;
+}

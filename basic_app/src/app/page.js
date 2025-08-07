@@ -11,7 +11,7 @@ export default function Home() {
     <div className={styles.page}>
       <h2>Component</h2>
       <NewComp name={"Sachin"}/>
-      <NewComp name={"Virat"}/>
+      {/* <NewComp name={"Virat"}/> */}
       {/* <NewComp name={"Dhoni"}/>
       <NewComp name={"Rohit"}/>
       <NewComp name={"Risahb"}/>

@@ -5,8 +5,7 @@ const About=()=>{
     const router=useRouter();
     return(
         <div>
-            <h2>About</h2><br/>
-
+            <p>Welcome to About Page. This is a simple example of Layout.</p>
             <Link href="/about/aboutTeacher">Go To About Teacher</Link><br/>
             <Link href="/about/aboutChildren">Got To About Children</Link>
 
