@@ -4,8 +4,6 @@ const DislikeButton=(props)=>{
 
     const {dislikes}=props;
 
-    console.log("Dislikes :",props.dislikes);
-
     const ClickHandler=()=>{
         alert(`Dislikes : ${dislikes}`);
     }
