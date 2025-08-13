@@ -1,4 +1,6 @@
 
+import Button from './button.js';
+
 // Server Component
 const ServerComponent = async () => {
   const res = await fetch("https://dummyjson.com/posts");
@@ -16,9 +18,13 @@ const ServerComponent = async () => {
         <div key={item.id}>
           <h3>Title : {item.title}</h3>
           <p>{item.body}</p>
-          <p>Tags : {item.tags.map(item=><span key={item.id}> #{item}</span>)}</p>
-          <p key={item.id}><span>Views : {item.views}</span> || <span style={{color:"red"}} >Likes :{item.reactions.likes}</span></p>
-        
+          <p>Tags : {item.tags.map(item=><span key={item}> #{item}</span>)}</p>
+          <p key={item.id}><span>Views : {item.views}</span> || <span  style={{color:"red"}} >Likes :{item.reactions.likes}</span></p>
+          {/* <p onClick={()=>alert("Dislikes")}>Dislikes : {item.reactions.dislikes}</p> */}
+          {/* onClick event will not work directly in server component */}
+
+        <Button dislikes={item.reactions.dislikes}/>
+
         </div>
       ))}
     </div>
