@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
+import color from "../../style/custom.module.css";
+
 // Client Side API rendering
 const ClientProducts = () => {
   const [products, setProducts] = useState([]);
@@ -28,18 +30,18 @@ const ClientProducts = () => {
 
   return (
     <div>
-      <h2>Client Component</h2>
-      <h2>Products : </h2>
+      <h2 className={color.head}>Client Component</h2>
+      <h2 className={color.pro}>Products : </h2>
       {products.map((items) => (
         <div key={items.id}>
-          <h3>Title : {items.title}</h3>
+          <h3 className={color.h3}>Title : {items.title}</h3>
           <Image
             src={items.images[0]}
             alt="Product-Image"
             width={300}
             height={300}
           />
-          <p>
+          <p className={color.p}>
             Price : {items.price} , Rating : {items.rating}{" "}
           </p>
         </div>
