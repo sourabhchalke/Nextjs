@@ -31,11 +31,18 @@ const ClientProducts = () => {
       <h2>Client Component</h2>
       <h2>Products : </h2>
       {products.map((items) => (
-       <div key={items.id}>
-            <h3>Title : {items.title}</h3>
-            <Image src={items.images} width={"200px"} alt="Product-Image"/>
-            <p>Price : {items.price} , Rating : {items.rating} </p>
-       </div>
+        <div key={items.id}>
+          <h3>Title : {items.title}</h3>
+          <Image
+            src={items.images[0]}
+            alt="Product-Image"
+            width={300}
+            height={300}
+          />
+          <p>
+            Price : {items.price} , Rating : {items.rating}{" "}
+          </p>
+        </div>
       ))}
     </div>
   );
