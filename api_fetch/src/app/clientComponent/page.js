@@ -1,9 +1,18 @@
 "use client";
 
+
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
 import color from "../../style/custom.module.css";
+
+import { Roboto } from 'next/font/google';
+
+const roboto=Roboto({
+  weight:"100",
+  subsets:["latin"],
+  display:"swap"
+})
 
 // Client Side API rendering
 const ClientProducts = () => {
@@ -30,7 +39,8 @@ const ClientProducts = () => {
 
   return (
     <div>
-      <h2 className={color.head}>Client Component</h2>
+      {/* <h2 style={{fontFamily:"Mozilla",fontWeight:"100"}} className={color.head}>Client Component</h2> */}
+      <h2 className={roboto.className}>Client Component</h2>
       <h2 className={color.pro}>Products : </h2>
       {products.map((items) => (
         <div key={items.id}>
