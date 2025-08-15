@@ -31,4 +31,13 @@ const ServerComponent = async () => {
     </div>
   );
 };
+
+
+export function generateMetadata({params}){
+  return{
+    title:"Server Component",
+    description:"Data fetching in Server Component",
+}
+}
+
 export default ServerComponent;

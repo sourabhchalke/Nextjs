@@ -58,5 +58,9 @@ const ClientProducts = () => {
       ))}
     </div>
   );
+  
 };
+
 export default ClientProducts;
+
+
