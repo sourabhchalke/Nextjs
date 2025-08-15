@@ -8,6 +8,7 @@ import color from "../../style/custom.module.css";
 
 import { Roboto } from 'next/font/google';
 
+
 const roboto=Roboto({
   weight:"100",
   subsets:["latin"],
@@ -42,6 +43,7 @@ const ClientProducts = () => {
       {/* <h2 style={{fontFamily:"Mozilla",fontWeight:"100"}} className={color.head}>Client Component</h2> */}
       <h2 className={roboto.className}>Client Component</h2>
       <h2 className={color.pro}>Products : </h2>
+
       {products.map((items) => (
         <div key={items.id}>
           <h3 className={color.h3}>Title : {items.title}</h3>
